@@ -1,1 +1,1 @@
-# ABB_IRB660_Robotic_Arm
+# Industrial 2D Drafting Robot Arm ABB IRB660 Project
