@@ -23,10 +23,9 @@ This project
 Regarding The complexity of the Robot kinematic chain, The equations i derived are not similar to the approch described in the next sections. I wporked in cylindrical coordinate $ (r,\rho,z)$, fixing the base robotaion of the robot 
 
 ## Kinematic Problem
-The robot input prameterics are 3 rotation angles denoted $ (q_{1},q_{2},q_{3}) $
+The robot input prameterics are 3 rotation angles denoted $(q_{1},q_{2},q_{3}) $
 ### Main kinematic Chain
-$ 
- \begin{array}{cccc}
+$\begin{array}{cccc}
 \text{Column 1} & \text{Column 2} & \text{Column 3} & \text{Column 4} \\
 \hline
 \text{Row 1, Cell 1} & \text{Row 1, Cell 2} & \text{Row 1, Cell 3} & \text{Row 1, Cell 4} \\
