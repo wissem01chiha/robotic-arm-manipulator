@@ -32,14 +32,16 @@ s_{\theta_{i}}& c_{\theta_{i}}c_{\alpha_{i}}& a_{23} & a_{i}s_{\theta_{i}} \\
 0&s_{\alpha_{i}}& c_{\alpha_{i}}& d_{i}&\\
 0 & 0 & 0 & 1\\
 \end{bmatrix}
-$$
-The robot input prameterics are 3 rotation angles denoted $(q_{1},q_{2},q_{3}) $
+$$ 
+
+The robot input prameterics are 3 rotation angles denoted $(q_{1},q_{2},q_{3})$
+
 ### Main kinematic Chain
 Link | $a_{i}$ |  $\alpha_{i}$ | $d_{i}$| $\theta_{i}$
----|---|---|---|---
-1 | 0 | 0 | 1 |$q_{1}$
-2 | $a_{2}$ | 0 |0| $q_{2}$
-3 |  |   |
+---|---        |---|---  |---
+1 | 0          | 0 | 1   | $q_{1}$
+2 | $a_{2}$    | 0 | 0   | $q_{2}$
+3 | $a_{3}$    |  $\alpha_{3}$  |  0   |$\theta_{3}$
 
 since the joint 3 is passive the value of $\theta_{3}$ will be given by the secnod chain respect to the main chain 
 ### Second Kinematic chain 
@@ -53,6 +55,7 @@ The simplest way to use is an inverse jacobien    <br>
 ## Referaneces
 <ul>
 <li> Robotics: Modelling Planning and Control Bruno-Siciliano-2010
+<li> Robotics, Vision and Control - Peter Corke-2020
 </ul> 
 
 ## Licence 
