@@ -108,7 +108,8 @@ $[\Delta q]=[J]^{-1} [\Delta P]=[J(q_{1},q_{2},q_{3})]^{-1}
 
 The $[\Delta P]$ vector results from the discretization of the robot end-effector trajectory. In my case, I use a fixed step workspace grid, and I determine the joint limits and workspace dimensions from experimenting with the robot's limit configurations.
 ## Control Schema
-For the control part, I employ the classical Inverse Jacobian Algorithm. Since we work in 2D, it's essential to maintain $\Delta z = 0$ to ensure contact of the end effector with the paper surface. We can achieve this by incorporating an additional prismatic joint.<br>
+For the control part, I employ the classical Inverse Jacobian Algorithm. Since we work in 2D, it's essential to maintain $\Delta z = 0$ to ensure contact of the end effector with the paper surface. We can achieve this by incorporating an additional prismatic joint.
+
 <img src="figures/control.drawio.png" />
 
 ## Prototyping & Experimentation 
