@@ -1,7 +1,7 @@
  clc
 clear  
 % Define The Robot Static Link Parmeters
-a1=300; a2=1280; a3=1350; a4=358;
+a1=0.300; a2=1.280; a3=1.350; a4=358;
 d1=800; d2=0;   d3=0;     d4=0;
 % Define The Robot Joint Parmeters  
 syms q1 q2 q3 theta; 
@@ -21,4 +21,16 @@ A4=subs(A,[theta_i,alpha_i,a_i,d_i],    [theta, 0, a4, d4]);
 % Calculate the T matrix 
 T=simplify(A1*A2*A3*A4);
 
-disp(T(:,4)) 
+disp(T(:,4))
+
+% in cylindrical coordinates 
+ 
+ 
+r=simplify(sqrt(T(1,4)^2+T(2,4)^2));
+phi=simplify(atan(T(2,4)/T(1,4)));
+z=T(3,4);
+disp("cylindical system ");
+disp(r);
+disp(phi);disp(z);
+
+
