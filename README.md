@@ -107,10 +107,10 @@ where  $[J]$ is a $3 \times 3$ matrix
 
 To compute the inverse Jacobian, we need to invert the matrix $[J]$. Therefore, we obtain:
 
-$[\Delta q]=[J]^{-1} [\Delta P]=[J(q_{1},q_{2},q_{3})]^{-1}
+$$[\Delta q]=[J]^{-1} [\Delta P]=[J(q_{1},q_{2},q_{3})]^{-1}
 \begin{bmatrix} 
 \Delta x ,\Delta y, \Delta z 
-\end{bmatrix}$
+\end{bmatrix}$$
 
 The $[\Delta P]$ vector results from the discretization of the robot end-effector trajectory. In my case, I use a fixed step workspace grid, and I determine the joint limits and workspace dimensions from experimenting with the robot's limit configurations.
 ## Control Schema
