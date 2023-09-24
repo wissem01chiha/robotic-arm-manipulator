@@ -61,15 +61,18 @@ we use the real dimension provided in the officel robot daa sheet  alhough our p
 since the joint 3 is passive the value of $\theta$ will be given by the secnod chain respect to the main chain 
 
 $T_{0}^{4}(q_{1},q_{2},q_{3},\theta)=A1*A2*A3*A4$
+
 the calculus is done by script1.m 
 we get  the position of the end effector by the 4_th colum of the matrix T 
-$$p=\begin{bmatrix}
+
+$$p=
+\begin{bmatrix}
 p_{x}\\
 p_{y}\\
 p_{z}
 \end{bmatrix}$$
 ### Parallel Kinematic chain 
-The parmeter $\theta$ is controlled by the second chain wich depends also of the position of the main chain more precilly the variable position of the joint centres $O_{3}$and $O_{4}$ in the base frame $(x_{0},y_{0},z_{0})$
+The parmeter $\theta$ is controlled by the second chain wich depends also of the position of the main chain more precilly the variable position of the joint centres $O_{3}$ and $O_{4}$ in the base frame $(x_{0},y_{0},z_{0})$
  
 ## Control Schema
 The simplest way to use is an inverse jacobien    <br>
