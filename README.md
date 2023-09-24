@@ -87,7 +87,7 @@ we can see that the system forward kinematic is hightlly non linear, so solving 
 ### Solution Approeach
 Given an intinal poistion of the robot defined by $P_{0}(q_{10},q_{20},q_{30})$ we will introduce an infinitisimal variation on each joint variable the end effector move to position $P$ The eroor given by :
 
-$e=P-P_{0}=\begin{bmatrix}
+$$e=P-P_{0}=\begin{bmatrix}
 p_{x}(q_{10}+\delta q_{1},q_{20}+\delta q_{2},q_{30}+\delta q_{3})-p_{x}(q_{10},q_{20},q_{30})\\
 p_{y}(q_{10}+\delta q_{1},q_{20}+\delta q_{2},q_{30}+\delta q_{3})-p_{y}(q_{10},q_{20},q_{30})\\
 p_{z}(q_{10}+\delta q_{1},q_{20}+\delta q_{2},q_{30}+\delta q_{3})-p_{z}(q_{10},q_{20},q_{30})
@@ -97,7 +97,7 @@ p_{z}(q_{10}+\delta q_{1},q_{20}+\delta q_{2},q_{30}+\delta q_{3})-p_{z}(q_{10},
   \delta q_{1} \\
   \delta q_{2}\\
   \delta q_{3}
-\end{bmatrix}$
+\end{bmatrix}$$
 
 with $[E]$ is a $3 \times 3$ matrix 
 
