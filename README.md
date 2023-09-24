@@ -1,10 +1,17 @@
 ![Static Badge](https://img.shields.io/badge/GNU-lic?style=gitlab&label=License%20&labelColor=rgb-rgb&color=rgb)
+![Static Badge](https://img.shields.io/badge/Beginner-lic?style=gitlab&label=Level&labelColor=rgb-rgb&color=rgb)
+
+![latex](https://img.shields.io/badge/LaTeX-47A141?style=for-the-badge&logo=LaTeX&logoColor=white)
+![arduin](https://img.shields.io/badge/Arduino_IDE-00979D?style=for-the-badge&logo=arduino&logoColor=white)
+<img src="figures/matlab.jpg" alt="Matlab Badge" width="50" height="29">
+
+
 # Industrial Palletizing Robot Arm ABB IRB660 Project 
 ## Table of Contents
 - [Introduction](#introduction)
-- [Project Structure](#project_struture)
+- [Project Structure](#project-struture)
 - [Methodology](#methodology)
-- [Kinematic Problem](#kinematicproblem)
+- [Kinematic Problem](#kinematic-problem)
 - [Inverse Kinamatic Problem](#inverse_kinematic_problem)
 - [Control Schema](#control_schema)
 - [Experimentation](#experimentation)
@@ -13,7 +20,7 @@
 - [License](#license)  
 
 ## Introduction 
-This project is  
+Welcome to my Industrial Palletizing Robot Arm project! Explore my journey of designing, building, and programming this complex robot and how I transformed it into a 2D drafting machine. Discover its kinematics, control systems, and more exciting features.
 
 ## Project Structure
 The project is organized in the flowwing tree: 
@@ -28,7 +35,6 @@ The project is organized in the flowwing tree:
 </li>
 </ul> 
  
-
 
 ## Methodology
 Regarding the complexity of the robot's kinematic chain, the equations I derived differ from the approach described in the following sections. I worked in cylindrical coordinates $(r, \rho, z)$ while keeping the base rotation of the robot fixed. I employed classical rigid body mechanics through closed-chain formulas.
@@ -53,7 +59,7 @@ $$
 
 The robot input parameters consist of three rotation angles denoted as $(q_1, q_2, q_3)$.
 
-### Main kinematic Chain
+#### Main kinematic Chain
 Link | $a_{i}$  |$\alpha_{i}$|$d_{i}$|$\theta_{i}$  
 ---|---         |---         |---    |---
 1  | $a_{1}$    | 0          |$d_{1}$     | $q_{1}$
@@ -76,12 +82,12 @@ p_{y}(q_{1},q_{2},q_{3},\theta)\\
 p_{z}(q_{1},q_{2},q_{3},\theta)
 \end{bmatrix}$$
 
-### Parallel Kinematic chain 
+#### Parallel Kinematic chain 
 The parameter $\theta$ is controlled by the second chain, which also depends on the position of the main chain, specifically the variable positions of the joint centers $O_3$ and $O_4$ in the base frame $(x_0, y_0, z_0)$. By applying parallelogram angles properties, we can assume that the joint variable $\theta$ satisfies the following property:<br>  
 $\theta=f(q_{3},q_{2})=4\pi/3+2\gamma-q_{3}-q_{2}-\beta$
 
 We can observe that the system's forward kinematics are highly nonlinear, making traditional solving methods time-consuming. To simplify the equations, I propose changing the system's coordinate system into a cylindrical system. 
-### Solution Approeach
+### Inverse Kinematic Problem
 Given an initial position of the robot defined by $P_0(q_1, q_2, q_3)$, if we introduce an infinitesimal variation in each joint variable, the end effector moves to position $P$. The error is given by:
 
 $$ \Delta P(q_{1},q_{2},q_{3})=P-P_{0}=\begin{bmatrix}
