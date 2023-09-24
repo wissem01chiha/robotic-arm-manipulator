@@ -35,7 +35,7 @@ the project is organized in the flowwing tree:
 Regarding The complexity of the Robot kinematic chain, The equations i derived are not similar to the approch described in the next sections. I wporked in cylindrical coordinate $(r,\rho,z)$, fixing the base robotaion of the robot 
 
 ## Kinematic Problem
-<div style="text-align: center;">
+<div style="text-align: center">
   <img src="figures/chains_graph.png" width="300" height="250" />
 </div>
 
@@ -85,25 +85,30 @@ $\theta=f(q_{3},q_{2})=4\pi/3+2\gamma-q_{3}-q_{2}-\beta$
 
 we can see that the system forward kinematic is hightlly non linear, so solving it with tradionlle way can be very time consuming , i get the ideao to change the system coordinate into cylindrical system to get more simple equations 
 ### Solution Approeach
-Given an intinal poistion of the robot defined by $P_{0}(q_{10},q_{20},q_{30})$ we will introduce an infinitisimal variation on each joint variable the end effector move to position $P$ The eroor given by :
+Given an intinal poistion of the robot defined by $P_{0}(q_{1},q_{2},q_{3})$ we will introduce an infinitisimal variation on each joint variable the end effector move to position $P$ The eroor given by :
 
-$$e=P-P_{0}=\begin{bmatrix}
-p_{x}(q_{10}+\delta q_{1},q_{20}+\delta q_{2},q_{30}+\delta q_{3})-p_{x}(q_{10},q_{20},q_{30})\\
-p_{y}(q_{10}+\delta q_{1},q_{20}+\delta q_{2},q_{30}+\delta q_{3})-p_{y}(q_{10},q_{20},q_{30})\\
-p_{z}(q_{10}+\delta q_{1},q_{20}+\delta q_{2},q_{30}+\delta q_{3})-p_{z}(q_{10},q_{20},q_{30})
+$$ \Delta P(q_{1},q_{2},q_{3})=P-P_{0}=\begin{bmatrix}
+p_{x}(q_{10}+\delta q_{1},q_{2}+\delta q_{2},q_{3}+\delta q_{3})-p_{x}(q_{1},q_{2},q_{3})\\
+p_{y}(q_{1}+\delta q_{1},q_{2}+\delta q_{2},q_{30}+\delta q_{3})-p_{y}(q_{1},q_{2},q_{3})\\
+p_{z}(q_{10}+\delta q_{1},q_{2}+\delta q_{2},q_{3}+\delta q_{3})-p_{z}(q_{1},q_{2},q_{3})
 \end{bmatrix}=
 [E].
 \begin{bmatrix}
   \delta q_{1} \\
   \delta q_{2}\\
   \delta q_{3}
-\end{bmatrix}$$
+\end{bmatrix}=
+[E][\Delta q]$$
 
-with $[E]$ is a $3 \times 3$ matrix 
+where  $[E]$ is a $3 \times 3$ matrix 
 
+in order to compute the inverse jacobien we need to inverse the matrix $[E]$
+hence we get :
 
+$[\Delta q]=[E]^{-1} [\Delta P]=[E(q_{1},q_{2},q_{3})]^{-1}\begin{bmatrix} \Delta x ,\Delta y, \Delta z\end{bmatrix}$
 
-
+the $[\Delta P]$ vector result from the discretaisation of the robot end-effector trajectory 
+, in my case i use a fixed step workspace grid  
 ## Control Schema
 The simplest way to use is an inverse jacobien    <br>
 <img src="figures/control.png" />
