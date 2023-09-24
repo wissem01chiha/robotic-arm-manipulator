@@ -135,7 +135,7 @@ Second, i first
 <ul>
 <li> Robotics: Modelling Planning and Control Bruno-Siciliano-2010
 <li> Robotics, Vision and Control - Peter Corke-2020
-</ul> 
+</ul>  
 
 ## Licence 
 The project is under the  GNU licencing for more details see <a ref="LICENCE.md">Licence</a> file.
