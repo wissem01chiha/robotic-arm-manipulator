@@ -3,7 +3,7 @@
 
 ![latex](https://img.shields.io/badge/LaTeX-47A141?style=for-the-badge&logo=LaTeX&logoColor=white)
 ![arduin](https://img.shields.io/badge/Arduino_IDE-00979D?style=for-the-badge&logo=arduino&logoColor=white)
-<img src="figures/matlab.jpg" alt="Matlab Badge" width="50" height="29">
+
 
 
 # Industrial Palletizing Robot Arm ABB IRB660 Project 
