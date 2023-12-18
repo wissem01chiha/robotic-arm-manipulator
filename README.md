@@ -1,10 +1,4 @@
-![Static Badge](https://img.shields.io/badge/GNU-lic?style=gitlab&label=License%20&labelColor=rgb-rgb&color=rgb)
-![Static Badge](https://img.shields.io/badge/Beginner-lic?style=gitlab&label=Level&labelColor=rgb-rgb&color=rgb)
-
-![latex](https://img.shields.io/badge/LaTeX-47A141?style=for-the-badge&logo=LaTeX&logoColor=white)
-![arduin](https://img.shields.io/badge/Arduino_IDE-00979D?style=for-the-badge&logo=arduino&logoColor=white)
-
-
+ 
 
 # Industrial Palletizing Robot Arm ABB IRB660 Project 
 ## Table of Contents
