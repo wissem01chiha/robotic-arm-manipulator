@@ -1,7 +1,10 @@
  
 
-# Industrial Palletizing Robot Arm ABB IRB660 Project 
-## Table of Contents
+## Industrial Palletizing Robot Arm ABB  Project 
+![GitHub License](https://img.shields.io/github/license/wissem01chiha/Robotic-Arm-Manipulator)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/t/wissem01chiha/Robotic-Arm-Manipulator)
+![GitHub Repo stars](https://img.shields.io/github/stars/wissem01chiha/Robotic-Arm-Manipulator)  
+### Table of Contents
 - [Introduction](#introduction)
 - [Project Structure](#project-struture)
 - [Methodology](#methodology)
@@ -13,10 +16,10 @@
 - [Contributing](#contributing)
 - [License](#license)  
 
-## Introduction 
+### Introduction 
 Welcome to my Industrial Palletizing Robot Arm project! Explore my journey of designing, building, and programming this complex robot and how I transformed it into a 2D drafting machine. Discover its kinematics, control systems, and more exciting features.
 
-## Project Structure
+### Project Structure
 The project is organized in the flowwing tree: 
 <ul>
 <li> Figures include simulation images and illustration graphics.
@@ -30,10 +33,10 @@ The project is organized in the flowwing tree:
 </ul> 
  
 
-## Methodology
+### Methodology
 Regarding the complexity of the robot's kinematic chain, the equations I derived differ from the approach described in the following sections. I worked in cylindrical coordinates $(r, \rho, z)$ while keeping the base rotation of the robot fixed. I employed classical rigid body mechanics through closed-chain formulas.
 
-## Kinematic Problem
+### Kinematic Problem
  
 <div style="text-align: center;">
   <img src="figures/chains_graph.png" width="500" height="450" />
@@ -107,12 +110,12 @@ $$[\Delta q]=[J]^{-1} [\Delta P]=[J(q_{1},q_{2},q_{3})]^{-1}
 \end{bmatrix}$$
 
 The $[\Delta P]$ vector results from the discretization of the robot end-effector trajectory. In my case, I use a fixed step workspace grid, and I determine the joint limits and workspace dimensions from experimenting with the robot's limit configurations.
-## Control Schema
+### Control Schema
 For the control part, I employ the classical Inverse Jacobian Algorithm. Since we work in 2D, it's essential to maintain $\Delta z = 0$ to ensure contact of the end effector with the paper surface. We can achieve this by incorporating an additional prismatic joint.
 
 <img src="figures/control.drawio.png" />
 
-## Prototyping & Experimentation 
+### Prototyping & Experimentation 
 The project implementation took me more than 2 months, during which I encountered significant technical challenges. I can summarize my journey in the following main steps:
 <ul>
 <li> I began by repairing and assembling the robot from scratch, using the minimal tools available in our club.
@@ -142,13 +145,13 @@ Here are the best results we obtained in some of our tests:
 
 <img src="figures/test1.jpg" width="300" height="200"/>
 
-## Referaneces
+### Referaneces
 <ul>
 <li> Robotics: Modelling Planning and Control Bruno-Siciliano-2010
 <li> Robotics, Vision and Control - Peter Corke-2020
 </ul>  
 
-## Contributing 
+### Contributing 
 I would be happy to welcome anyone willing to contribute or support this project.
-## Licence 
+### Licence 
 The project is licensed under the GNU license. For more details, please refer to the License file.
